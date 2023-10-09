@@ -1,8 +1,7 @@
 #include<stdio.h>
 
 /**
- * main - print "Programing is like ... puzzle
- * 
+ * main - print "Programing is like ... puzzle.
  * Return: Always 0.
  */
 
