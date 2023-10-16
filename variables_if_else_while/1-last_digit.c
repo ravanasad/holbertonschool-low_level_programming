@@ -16,7 +16,7 @@ int main(void)
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
 	last = n % 10;
-	printf("%d is %d and ", n, last);
+	printf("Last digit of %d is %d and ", n, last);
 	if (last == 0)
 	{
 		printf("is 0");
