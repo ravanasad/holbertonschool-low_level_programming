@@ -4,6 +4,7 @@
 #include <ctype.h>
 /**
  * _islower - checks for lowercase character
+ * @c: first param
  * Return: Always 0
  */
 
