@@ -1,5 +1,6 @@
 #include "main.h"
 #include <ctype.h>
+
 /**
  * print_square - prints a square
  * @size: size of square
