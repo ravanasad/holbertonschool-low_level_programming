@@ -1,10 +1,11 @@
 #include "main.h"
 #include <string.h>
 /**
- * int_strlen -swaps the values of two integers
+ * _strlen -swaps the values of two integers
  * @s: first param.
+ * Return: length of str
  */
 int _strlen(char *s)
 {
-	return strlen(s);
-}	
+	return (strlen(s));
+}
