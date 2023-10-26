@@ -8,7 +8,8 @@
 
 int _atoi(char *str)
 {
-	int i = 0, val = 0;
+	int i = 0;
+        unsigned int val = 0;
 	bool isNegative = false;
 
 	for (; str[i] != '\0'; i++)
