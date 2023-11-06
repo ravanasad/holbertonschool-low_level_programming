@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /**
- * _strdup - returns a pointer to a newly allocated
+ * _strdup - returns a pointer to a newly allocate
  * space in memory
  * @str: string
  * Return: NULL if str = NULL
@@ -13,6 +13,8 @@ char *_strdup(char *str)
 	char *arr;
 	unsigned int i = 0, size = 0;
 
+	if (str == NULL)
+		return (NULL);
 	while (str[size] != '\0')
 		size++;
 	arr = malloc(size * sizeof(char));
