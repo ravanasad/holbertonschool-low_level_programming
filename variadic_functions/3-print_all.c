@@ -23,7 +23,9 @@ void print_int(va_list list)
  */
 void print_string(va_list list)
 {
-	printf("%s", va_arg(list, char *));
+	char *str = va_arg(list, char *);
+
+	printf("%s", str == NULL ? "(nil)" : str);
 }
 /**
  * print_float - print float
