@@ -7,7 +7,7 @@
 * @head: pointer to the list_t list to add the node to
 * @str: string to initialize the new node with
 * Return: if the function fails - NULL
-*        otherwise - the address of the new element
+*        otherwise - the address of the new element 
 */
 list_t *add_node_end(list_t **head, const char *str)
 {
@@ -36,4 +36,6 @@ temp = temp->next;
 }
 temp->next = node;
 node->next = NULL;
+}
+return (node);
 }
