@@ -16,10 +16,15 @@ if (!head)
 return (NULL);
 
 temp = head;
-while (i < index)
+while (i < index && temp != NULL)
 {
 temp = temp->next;
 i++;
+}
+if (temp == NULL)
+{
+printf("(nil)");
+exit (98);
 }
 return (temp);
 }
