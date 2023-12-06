@@ -24,7 +24,7 @@ i++;
 if (temp == NULL)
 {
 printf("(nil)\n");
-exit (98);
+exit(98);
 }
 return (temp);
 }
