@@ -23,7 +23,7 @@ i++;
 }
 if (temp == NULL)
 {
-printf("(nil)");
+printf("(nil)\n");
 exit (98);
 }
 return (temp);
