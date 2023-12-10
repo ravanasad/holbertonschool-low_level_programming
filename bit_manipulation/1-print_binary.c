@@ -16,18 +16,18 @@ _putchar('0');
 return;
 }
 
-for (int i = 31; i >= 0; i--)
+for (i = 31; i >= 0; i--)
 {
 if (check)
 {
-if (n>>i & 1)
+if (n >> i & 1)
 {
 _putchar('1');
 }
 else
 _putchar('0');
 }
-else if (n>>i & 1)
+else if (n >> i & 1)
 {
 _putchar('1');
 check = 1;
