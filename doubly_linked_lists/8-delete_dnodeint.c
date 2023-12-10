@@ -23,6 +23,8 @@ return (1);
 }
 while (i < idx)
 {
+if (cur == NULL)
+return (-1);
 cur = cur->next;
 i++;
 }
