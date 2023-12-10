@@ -9,26 +9,39 @@
  * @n: data
  * Return: the address of the new node, or NULL if it failed
 */
-
 dlistint_t *insert_dnodeint_at_index(dlistint_t **head,
 		unsigned int idx, int n)
 {
-dlistint_t *node, *tmp = *head;
+dlistint_t *node, *cur = *head;
 unsigned int i = 0;
 
 node = malloc(sizeof(dlistint_t));
 if (node == NULL)
 return (NULL);
-
-while (i != (idx - 1))
-{
-if (tmp == NULL || tmp->next == NULL)
+node->n = n;
+if (head == NULL)
 return (NULL);
-tmp = tmp->next;
+
+if (idx == 0)
+{
+*head = node;
+return (node);
+}
+while (cur)
+{
+if (i == (idx - 1))
+{
+node->next = cur->next;
+if (cur->next != NULL)
+{
+cur->next->prev = node;
+}
+cur->next = node;
+node->prev = cur;
+return (node);
+}
+cur = cur->next;
 i++;
 }
-node->n = n;
-node->next = tmp->next;
-tmp->next = node;
-return (node);
+return (NULL);
 }
