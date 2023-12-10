@@ -5,35 +5,37 @@
  * delete_dnodeint_at_index - deletes the node at index index of a
  * dlistint_t linked list.
  * @head: pointer to head of list
- * @idx: index
+ * @index: index
  * Return: 1 if it succeeded, -1 if it failed
 */
-int delete_dnodeint_at_index(dlistint_t **head, unsigned int idx)
+int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 {
-dlistint_t *node, *cur = *head;
+dlistint_t *current = *head;
 unsigned int i = 0;
 
-node = malloc(sizeof(dlistint_t));
-if (node == NULL || *head == NULL)
+if (*head == NULL)
 return (-1);
-if (idx == 0)
+
+if (index == 0)
 {
-*head = cur->next;
+*head = current->next;
 if (*head != NULL)
 (*head)->prev = NULL;
-free(cur);
+free(current);
 return (1);
 }
-while (i < idx)
-{
-if (cur == NULL)
+
+for (i = 0; i < index && current != NULL; i++)
+current = current->next;
+
+if (current == NULL)
 return (-1);
-cur = cur->next;
-i++;
-}
-cur->prev->next = cur->next;
-if (cur->next != NULL)
-cur->next->prev = cur->prev;
-free(cur);
-return (-1);
+
+current->prev->next = current->next;
+if (current->next != NULL)
+current->next->prev = current->prev;
+
+free(current);
+
+return (1);
 }
