@@ -24,9 +24,7 @@ return (NULL);
 
 if (idx == 0)
 {
-node->next = *head;
-*head = node;
-return (node);
+return (add_dnodeint(head, n));
 }
 while (cur)
 {
