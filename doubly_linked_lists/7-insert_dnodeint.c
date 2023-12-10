@@ -24,7 +24,8 @@ return (NULL);
 
 if (idx == 0)
 {
-*head = node;
+node->next = *head;
+(*head)->prev = node;
 return (node);
 }
 while (cur)
