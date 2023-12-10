@@ -21,6 +21,7 @@ if (idx == 0)
 *head = cur->next;
 if (*head != NULL)
 (*head)->prev = NULL;
+free(cur);
 return (1);
 }
 while (i < idx)
