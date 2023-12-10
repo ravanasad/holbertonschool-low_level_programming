@@ -33,6 +33,6 @@ i++;
 cur->prev->next = cur->next;
 if (cur->next != NULL)
 cur->next->prev = cur->prev;
-
+free(cur);
 return (-1);
 }
