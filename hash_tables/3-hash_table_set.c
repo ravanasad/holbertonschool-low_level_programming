@@ -13,6 +13,10 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	int i, idx;
 	char *val;
 
+	if (ht == NULL)
+	{
+		return (0);
+	}
 	val = strdup(value);
 	if (!val)
 		return (0);
